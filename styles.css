@@ -1,0 +1,101 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    overflow: hidden; /* Asegúrate de que no haya scroll */
+}
+
+.main-box {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.container {
+    text-align: center;
+    position: relative;
+}
+
+.center-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.letter {
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+
+.buttons {
+    margin-top: 20px;
+    position: relative;
+}
+
+.button {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+#yes-button {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#no-button {
+    background-color: #f44336;
+    color: white;
+    position: absolute; /* Necesario para mover el botón "No" */
+}
+
+body {
+    background-image: url('img/67663.jpg'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#falling-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Asegúrate de que los elementos que caen no interfieran con la interacción del usuario */
+}
+
+.falling-heart, .falling-text {
+    position: absolute;
+    animation: fall linear infinite;
+}
+
+.falling-heart {
+    width: 30px;
+    height: 30px;
+    background-image: url('img/image-removebg-preview\ \(2\).png'); /* Reemplaza con la ruta de tu imagen de corazón */
+    background-size: cover;
+}
+
+.falling-text {
+    font-size: 1.2em;
+    color: red;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(100vh);
+    }
+}
